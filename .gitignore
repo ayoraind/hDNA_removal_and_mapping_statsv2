@@ -1,0 +1,7 @@
+test*
+work
+*.nextflow*
+Sample_files
+.default_output
+GRCh38.primary_assembly.genome.fa
+GCF_009914755.1_T2T-CHM13v2.0_genomic.fna
