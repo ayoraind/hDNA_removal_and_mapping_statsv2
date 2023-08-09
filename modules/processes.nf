@@ -331,11 +331,10 @@ process COMBINE_BAM_STATISTICS_SECOND_ITERATION {
     
     # add header line if first file
     if [[ \$index -eq 0 ]]; then
-      echo "\$(head -1 \${BAM_STATISTICS_FILE})" >> combined_bam_stats.txt
+      echo "\$(head -1 \${BAM_STATISTICS_FILE})" >> combined_bam_stats_2nd_iteration.txt
     fi
-    echo "\$(awk 'FNR==2 {print}' \${BAM_STATISTICS_FILE})" >> combined_bam_stats.txt
+    echo "\$(awk 'FNR==2 {print}' \${BAM_STATISTICS_FILE})" >> combined_bam_stats_2nd_iteration.txt
     done
-	
-    mv combined_bam_stats.txt combined_bam_stats_2nd_iteration.txt
+
     """
 }
